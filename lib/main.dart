@@ -33,7 +33,7 @@ class LandingPage extends StatelessWidget {
           );
         }
 
-        // Connection to Firebase - Firebase App is running
+        // Connection to Firebase - Firebase App is running fine
         if(snapshot.connectionState == ConnectionState.done){
           return Scaffold(
             body: Center(
