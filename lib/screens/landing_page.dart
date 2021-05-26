@@ -34,7 +34,7 @@ class LandingPage extends StatelessWidget {
         return Scaffold(
           body: Center(
             child: Text(
-              "Initializing App..",
+              "Initializing App....",
               style: Constant.regularHeading,
             ),
           ),
