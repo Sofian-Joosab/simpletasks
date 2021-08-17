@@ -1,4 +1,6 @@
 import 'package:e_commers/screens/constants.dart';
+import 'package:e_commers/screens/home_page.dart';
+import 'package:e_commers/screens/login_page.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 
@@ -21,24 +23,11 @@ class LandingPage extends StatelessWidget {
 
         // Connection to Firebase - Firebase App is running fine
         if (snapshot.connectionState == ConnectionState.done) {
-          return Scaffold(
-            body: Center(
-                child: Text(
-              "Firebase App Initialized",
-              style: Constant.regularHeading,
-            )),
-          );
+          return HomePage();
         }
 
         //Connecting to Firebase - App is Loading
-        return Scaffold(
-          body: Center(
-            child: Text(
-              "Initializing App....",
-              style: Constant.regularHeading,
-            ),
-          ),
-        );
+        return LoginPage();
       },
     );
   }
