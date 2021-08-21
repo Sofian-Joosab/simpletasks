@@ -12,12 +12,22 @@ class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        child: Text(
-          "LoginPage",
-          style: Constants.regularHeading,
+      body: SafeArea(
+        child: Container(
+          width: double.infinity,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Text("Welcome user, \nLogin to your account",
+              textAlign: TextAlign.center,
+              style: Constants.boldHeading,
+              ),
+              Text("input fields"),
+              Text("creat account Button")
+            ],
+          ),
         ),
-      ),
+      )
     );
   }
 }
