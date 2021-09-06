@@ -34,6 +34,7 @@ class _LoginPageState extends State<LoginPage> {
                 onPressed: () {
                   print("Clicked the Create New Account button");
                 },
+                outlineBtn: true,
               ),
             ],
           ),

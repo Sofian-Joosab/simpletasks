@@ -8,12 +8,15 @@ class Custm_btn extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
+    bool _outlineBtn = outlineBtn ?? false;
     return GestureDetector(
       onTap: onPressed,
       child: Container(
         height: 60.0,
         alignment: Alignment.center,
         decoration: BoxDecoration(
+          color: _outlineBtn ? Colors.transparent : Colors.black,
           border: Border.all(
             color: Colors.black,
             width: 2.0,
@@ -28,7 +31,7 @@ class Custm_btn extends StatelessWidget {
             text ?? "Text",
           style: TextStyle(
             fontSize: 16.0,
-            color: Colors.black,
+            color: _outlineBtn ? Colors.black : Colors.white,
             fontWeight: FontWeight.w600,
           ),
         ),
