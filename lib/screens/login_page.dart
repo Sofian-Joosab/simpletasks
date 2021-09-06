@@ -1,4 +1,5 @@
 import 'package:e_commers/screens/constants.dart';
+import 'package:e_commers/widgets/custm_btn.dart';
 import 'package:flutter/material.dart';
 
 class LoginPage extends StatefulWidget {
@@ -18,12 +19,22 @@ class _LoginPageState extends State<LoginPage> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text("Welcome user, \nLogin to your account",
-              textAlign: TextAlign.center,
-              style: Constants.boldHeading,
+              Container(
+                padding: EdgeInsets.only(
+                  top: 24.0,
+                ),
+                child:  Text("Welcome user, \nLogin to your account",
+                textAlign: TextAlign.center,
+                style: Constants.boldHeading,
+                ),
               ),
               Text("input fields"),
-              Text("creat account Button")
+              Custm_btn(
+                text: "Create New Account",
+                onPressed: () {
+                  print("Clicked the Create New Account button");
+                },
+              ),
             ],
           ),
         ),
